@@ -104,4 +104,19 @@ footer {
 
 .dark-mode footer {
   background: #111;
+  .habilidades li {
+  background: #0066cc;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.habilidades li i {
+  font-size: 20px;
+}
 }
