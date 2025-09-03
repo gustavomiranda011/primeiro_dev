@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projetos - Gustavo Miranda</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Gustavo Miranda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Meus Projetos</h1>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+            <h1>Gustavo Miranda</h1>
+            <p>Meus Projetos</p>
+        </div>
+    </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="projetos.html" class="ativo">Projetos</a></li>
-      <li><a href="curriculo.html">Currículo</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html" class="ativo">Projetos</a></li>
+            <li><a href="currilo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-  <main class="container">
-    <section class="projeto">
-      <h2>Site de Portfólio</h2>
-      <p>Este projeto é um portfólio pessoal simples feito com HTML, CSS e um pouco de JavaScript.</p>
-      <p><strong>Tecnologias usadas:</strong> HTML, CSS, JavaScript</p>
-      <button class="botao">Ver mais</button>
-    </section>
-  </main>
+    <main class="container">
+        <section class="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="projetos-grid">
+                <div class="projeto-item">
+                    <h3>Site de Portfólio</h3>
+                    <p>Um portfólio pessoal feito com HTML, CSS e um pouco de JavaScript.</p>
+                    <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                    <button class="botao">Ver mais</button>
+                </div>
+                
+                <div class="projeto-item">
+                    <h3>Outro Projeto</h3>
+                    <p>Descrição breve de outro projeto que você desenvolveu.</p>
+                    <p><strong>Tecnologias:</strong> Python, Flask</p>
+                    <button class="botao">Ver mais</button>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 Gustavo Miranda</p>
-  </footer>
+        <button id="tema-btn" class="botao">Alternar Tema Escuro</button>
+    </main>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Gustavo Miranda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
