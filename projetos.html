@@ -1,34 +1,76 @@
- const btnIrAgora = document.getElementById('btnIrAgora');
-            
-            nomeProjetoElemento.textContent = nomeProjeto;
-            urlDestinoElemento.textContent = url;
-            modal.style.display = 'flex';
-            
-            let segundos = 5;
-            contadorElemento.textContent = segundos;
-            
-            const intervalo = setInterval(() => {
-                segundos--;
-                contadorElemento.textContent = segundos;
-                
-                if (segundos <= 0) {
-                    clearInterval(intervalo);
-                    window.open(url, '_blank');
-                    modal.style.display = 'none';
-                }
-            }, 1000);
-            
-            btnCancelar.onclick = function() {
-                clearInterval(intervalo);
-                modal.style.display = 'none';
-            };
-            
-            btnIrAgora.onclick = function() {
-                clearInterval(intervalo);
-                window.open(url, '_blank');
-                modal.style.display = 'none';
-            };
-        }
-    </script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Meus Projetos</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html" class="ativo">Projetos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="controles-tema">
+            <button id="tema-btn" class="botao">Alternar Tema Escuro</button>
+        </div>
+
+        <section class="projeto">
+            <div class="imagem-container">
+                <img src="imagens/projeto-exemplo.jpg" alt="Projeto Site Pessoal" class="imagem-projeto">
+            </div>
+            <div class="projeto-info">
+                <h2>Site Pessoal</h2>
+                <p>Meu primeiro portfólio criado com HTML, CSS e JavaScript. Um projeto simples mas que representa meu início na programação web.</p>
+                <p><strong>Tecnologias usadas:</strong> HTML5, CSS3, JavaScript</p>
+                <a href="#" class="botao" onclick="redirecionar('https://www.ipicambuci.com.br/', 'Site Pessoal')">Ver mais</a>
+            </div>
+        </section>
+
+        <section class="projeto">
+            <div class="imagem-container">
+                <img src="imagens/projeto-exemplo2.jpg" alt="Projeto Landing Page" class="imagem-projeto">
+            </div>
+            <div class="projeto-info">
+                <h2>Landing Page</h2>
+                <p>Uma landing page responsiva para um produto fictício, desenvolvida como exercício de aprendizado.</p>
+                <p><strong>Tecnologias usadas:</strong> HTML5, CSS3, Flexbox</p>
+                <a href="#" class="botao" onclick="redirecionar('https://dede-dahora.github.io/Atividade-Trimestral-Desenvolvimento-WEB/', 'Landing Page')">Ver mais</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de redirecionamento -->
+    <div id="modalRedirecionamento" class="modal">
+        <div class="modal-conteudo">
+            <h2>Redirecionando para <span id="nomeProjeto"></span></h2>
+            <p>Você está sendo redirecionado para um site externo em:</p>
+            <div class="modal-contador" id="contador">5</div>
+            <p>URL de destino:</p>
+            <p class="url-destino" id="urlDestino"></p>
+            <div class="modal-botoes">
+                <button class="botao" id="btnCancelar">Cancelar</button>
+                <button class="botao" id="btnIrAgora">Ir Agora</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Gustavo Miranda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
