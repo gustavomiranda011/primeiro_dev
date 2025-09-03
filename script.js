@@ -1,47 +1,58 @@
-// Alternar tema escuro/claro
-const temaBtn = document.getElementById('tema-btn');
+// script.js
+
+// Função para alternar tema claro/escuro e salvar preferência no localStorage
+const botaoTema = document.getElementById('tema-btn');
 const body = document.body;
 
-const temaPreferido = localStorage.getItem('tema') || 'claro';
-body.setAttribute('data-tema', temaPreferido);
-atualizarTextoBotaoTema();
-
-temaBtn.addEventListener('click', () => {
-    const temaAtual = body.getAttribute('data-tema');
-    const novoTema = temaAtual === 'claro' ? 'escuro' : 'claro';
-    
-    body.setAttribute('data-tema', novoTema);
-    localStorage.setItem('tema', novoTema);
-    
-    atualizarTextoBotaoTema();
-});
-
-function atualizarTextoBotaoTema() {
-    const temaAtual = body.getAttribute('data-tema');
-    temaBtn.textContent = temaAtual === 'claro' 
-        ? 'Alternar Tema Escuro' 
-        : 'Alternar Tema Claro';
+function alternarTema() {
+  if (body.getAttribute('data-tema') === 'escuro') {
+    body.removeAttribute('data-tema');
+    botaoTema.textContent = 'Alternar Tema Escuro';
+    localStorage.setItem('tema', 'claro');
+  } else {
+    body.setAttribute('data-tema', 'escuro');
+    botaoTema.textContent = 'Alternar Tema Claro';
+    localStorage.setItem('tema', 'escuro');
+  }
 }
 
-// Formulário de contato
+// Verifica se há preferência salva e aplica
+function aplicarTemaSalvo() {
+  const temaSalvo = localStorage.getItem('tema');
+  if (temaSalvo === 'escuro') {
+    body.setAttribute('data-tema', 'escuro');
+    botaoTema.textContent = 'Alternar Tema Claro';
+  } else {
+    botaoTema.textContent = 'Alternar Tema Escuro';
+  }
+}
+
+// Evento do botão tema
+if (botaoTema) {
+  botaoTema.addEventListener('click', alternarTema);
+}
+
+// Inicializa tema no carregamento da página
+window.addEventListener('DOMContentLoaded', aplicarTemaSalvo);
+
+// Função para formulário de contato (exemplo simples)
 const formContato = document.getElementById('form-contato');
-if (formContato) {
-    formContato.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-        formContato.reset();
-    });
-}
 
-// Efeito hover nos cards de projeto
-const projetos = document.querySelectorAll('.projeto');
-projetos.forEach(projeto => {
-    projeto.addEventListener('mouseenter', () => {
-        projeto.style.transform = 'translateY(-5px)';
-        projeto.style.transition = 'transform 0.3s';
-    });
-    
-    projeto.addEventListener('mouseleave', () => {
-        projeto.style.transform = 'translateY(0)';
-    });
-});
+if (formContato) {
+  formContato.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const nome = formContato.nome.value.trim();
+    const email = formContato.email.value.trim();
+    const mensagem = formContato.mensagem.value.trim();
+
+    if (nome === '' || email === '' || mensagem === '') {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
+    // Aqui poderia enviar os dados para um backend ou serviço de email
+    alert(`Obrigado pelo contato, ${nome}! Em breve responderei seu email.`);
+    formContato.reset();
+  });
+}

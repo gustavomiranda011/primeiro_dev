@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Gustavo Miranda</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - Gustavo Miranda</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Entre em Contato</h1>
+  <header>
+    <div class="container">
+      <h1>Entre em Contato</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="projetos.html">Projetos</a></li>
+      <li><a href="curriculo.html">Currículo</a></li>
+      <li><a href="contato.html" class="ativo">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main class="container contato">
+    <section>
+      <h2>Formulário de Contato</h2>
+      <form id="form-contato">
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
         </div>
-    </header>
+        <div class="campo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="campo">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="botao">Enviar</button>
+      </form>
+    </section>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" target="_blank">Home</a></li>
-            <li><a href="projetos.html" target="_blank">Projetos</a></li>
-            <li><a href="contato.html" target="_blank" class="ativo">Contato</a></li>
-        </ul>
-    </nav>
+    <section>
+      <h2>Meus Contatos</h2>
+      <div class="redes-sociais">
+        <a href="https://github.com/seuusuario" target="_blank" rel="noopener noreferrer" title="GitHub">
+          🐱 GitHub: github.com/seuusuario
+        </a>
+        <a href="mailto:seuemail@exemplo.com" title="Email">
+          📧 Email: seuemail@exemplo.com
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <main class="container">
-        <section class="contato">
-            <h2>Fale comigo</h2>
-            <div class="redes-sociais">
-                <a href="mailto:gustavo@example.com" class="botao">Email</a>
-                <a href="https://github.com/gustamiranda00" target="_blank" class="botao">GitHub</a>
-            </div>
+  <footer>
+    <p>&copy; 2025 Gustavo Miranda. Todos os direitos reservados.</p>
+  </footer>
 
-            <form id="form-contato" class="form-contato">
-                <h3>Ou envie uma mensagem:</h3>
-                <label>Nome:</label>
-                <input type="text" name="nome" required>
-                <label>Email:</label>
-                <input type="email" name="email" required>
-                <label>Mensagem:</label>
-                <textarea name="mensagem" rows="5" required></textarea>
-                <button type="submit" class="botao">Enviar</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Gustavo Miranda. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
