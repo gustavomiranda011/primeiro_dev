@@ -2,7 +2,6 @@
 const temaBtn = document.getElementById('tema-btn');
 const body = document.body;
 
-// Verificar preferência do usuário
 const temaPreferido = localStorage.getItem('tema') || 'claro';
 body.setAttribute('data-tema', temaPreferido);
 atualizarTextoBotaoTema();
@@ -26,12 +25,9 @@ function atualizarTextoBotaoTema() {
 
 // Formulário de contato
 const formContato = document.getElementById('form-contato');
-
 if (formContato) {
     formContato.addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        // Simular envio
         alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
         formContato.reset();
     });
@@ -39,7 +35,6 @@ if (formContato) {
 
 // Efeito hover nos cards de projeto
 const projetos = document.querySelectorAll('.projeto');
-
 projetos.forEach(projeto => {
     projeto.addEventListener('mouseenter', () => {
         projeto.style.transform = 'translateY(-5px)';
