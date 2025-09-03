@@ -1,36 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Gustavo Miranda Barca</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Contato</h1>
+    <header>
+        <div class="container">
+            <h1>Entre em Contato</h1>
+        </div>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html" class="ativo">Contato</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Entre em contato</h2>
-      <p>Email: <a href="mailto:gustavomiranda@colegiopaulodetarso.com.br">
-        gustavomiranda@colegiopaulodetarso.com.br
-      </a></p>
-      <p>GitHub: <a href="https://github.com/gustamiranda00" target="_blank">github.com/gustamiranda00</a></p>
-     
-    </section>
-  </main>
+    <main class="container">
+        <section class="contato">
+            <h2>Informações de Contato</h2>
+            <p>Você pode me encontrar nas seguintes plataformas:</p>
+            
+            <div class="redes-sociais">
+                <a href="mailto:andresoaresantos10@gmail.com" class="botao">Email</a>
+                <a href="https://github.com/dede-dahora" target="_blank" class="botao">GitHub</a>
+                <a href="https://linkedin.com/in/andre-soares" target="_blank" class="botao">LinkedIn</a>
+            </div>
 
-  <footer>
-    <p>© 2025 - Gustavo Miranda Barca</p>
-  </footer>
+            <form id="form-contato" class="form-contato">
+                <h3>Ou me envie uma mensagem:</h3>
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="botao">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 André Soares. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

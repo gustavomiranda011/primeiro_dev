@@ -1,44 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Gustavo Miranda Barca</title>
-  <link rel="stylesheet" href="style.css">  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Gustavo Miranda Barca</h1>
+    <header>
+        <div class="container">
+            <h1>André Soares Costa Zauli Santos</h1>
+            <p>Desenvolvedor Web</p>
+        </div>
+    </header>
+
     <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html" class="ativo">Home</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <section class="apresentacao">
-      <img src="imagens/avatar.png" alt="Avatar Gustavo" class="avatar">
-      <p>Sou estudante interessado em tecnologia e desenvolvimento web.</p>
-    </section>
+    <main class="container">
+        <section class="sobre">
+            <img src="imagens/avatar.jpg" alt="Minha foto ou avatar" class="avatar">
+            <div class="apresentacao">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Eu sou André Soares Costa Zauli Santos, um desenvolvedor web apaixonado por criar soluções digitais. Atualmente estou focado em aprender e aprimorar minhas habilidades em front-end.</p>
+                <p>Quando não estou codando, gosto de jogar basquete e outros esportes, jogar jogos online com meus amigos e entre várias outras coisas que envolvem atividade física e diversão.</p>
+            </div>
+        </section>
 
-   <section class="habilidades">
-  <h2>Habilidades</h2>
-  <ul>
-    <li><i class="devicon-html5-plain colored"></i> HTML</li>
-    <li><i class="devicon-css3-plain colored"></i> CSS</li>
-    <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
-    <li><i class="devicon-python-plain colored"></i> Python</li>
-  </ul>
-</section>
+        <section class="habilidades">
+            <h2>Minhas Habilidades</h2>
+            <div class="habilidades-grid">
+                <div class="habilidade-item">
+                    <img src="imagens/html5.png" alt="HTML5" class="icone-habilidade">
+                    <span>HTML5</span>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/css3.png" alt="CSS3" class="icone-habilidade">
+                    <span>CSS3</span>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/javascript.png" alt="JavaScript" class="icone-habilidade">
+                    <span>JavaScript</span>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/git.png" alt="Git" class="icone-habilidade">
+                    <span>Git</span>
+                </div>
+                <div class="habilidade-item">
+                    <img src="imagens/github.png" alt="GitHub" class="icone-habilidade">
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 - Gustavo Miranda Barca</p>
-    <button onclick="toggleTema()">🌙 Alternar Tema</button>
-  </footer>
+        <button id="tema-btn" class="botao">Alternar Tema Escuro</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 André Soares. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
